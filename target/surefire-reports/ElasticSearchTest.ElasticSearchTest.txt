@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ElasticSearchTest.ElasticSearchTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 17.777 sec - in ElasticSearchTest.ElasticSearchTest

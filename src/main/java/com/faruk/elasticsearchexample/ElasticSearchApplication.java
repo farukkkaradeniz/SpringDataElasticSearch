@@ -36,17 +36,13 @@ public class ElasticSearchApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         printElasticSearchInfo();
-
-//        playerService.save(new Players(Long.valueOf("1"), "Wesley", "Sneijder", "Playing for Galatasaray"));
-//        playerService.save(new Players(Long.valueOf("2"), "Selçuk", "İnan", "Playing for Galatasaray"));
-//        playerService.save(new Players(Long.valueOf("3"), "Felipe", "Melo", "Played for Galatasaray"));
+        long start = System.currentTimeMillis();
+        System.out.println(playerService.findOneByFirstName("Cristiano"));
+        System.out.println("Time = " + (System.currentTimeMillis() - start));
         
-        Iterable<Players> allItems = playerService.findAll();
-        
-        System.out.println(playerService.findOne(Long.valueOf("1")).getExtraInformation());
     }
 
-    //useful for debug, print elastic search details
+
     private void printElasticSearchInfo() {
 
         System.out.println("--ElasticSearch--");
